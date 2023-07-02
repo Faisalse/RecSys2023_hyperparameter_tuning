@@ -4,7 +4,7 @@
 
 <head>
 
-	<title>ICDM 2023 - Additional Information and Results</title>
+	<title>RecSys 2023 - Additional Information and Results</title>
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
@@ -118,7 +118,7 @@
 			ICDM 2023 - Shanghai, China
 		</span> <br />
 		<span class="highlighted">
-			Performance Comparison of Session-based Recommendation Algorithms based on Graph Neural Networks
+			Everyone’s a Winner! On Hyperparameter Tuning of Recommendation Models
 		</span> <br />
 		<span class="subtext">
 			Additional Information: Source Code, Optimized Hyper-Parameters and Additional Result Tables
@@ -130,24 +130,15 @@
 	<div class="authors">
 		
 		<div class="author">
-			Anonymous <br/>
-			<span class="mail">Anonymous [at] gmail.com</span><br/>
+			Faisal Shehzad <br/>
+			<span class="mail">faisal.shehzad@aau.at</span><br/>
 		</div>
         
-        	<!-- <div class="author">
-			Anonymous <br/>
-			<span class="mail">Anonymous [at] gmail.com</span><br/>
+        	 <div class="author">
+			Dietmar Jannach <br/>
+			<span class="mail">dietmar.jannach@aau.at</span><br/>
 		</div>
         
-        	<div class="author">
-			Anonymous <br/>
-			<span class="mail">Anonymous [at] gmail.com</span><br/>
-		</div> -->
-        
-        	<div class="author">
-			Anonymous <br/>
-			<span class="mail">Anonymous [at] gmail.com</span><br/>
-		</div>
 		
 	</div>
 	
@@ -156,7 +147,7 @@
 	<div class="abstract">
 
 		<p align="justify">
-		     In session-based recommendation settings, a recommender system has no access to long-term user profiles and thus has to base its item suggestions on the user interactions that are observed in an ongoing session. Since such sessions can consist of only a small set of interactions, various hybrid approaches were proposed in the recent literature, which consider side information about the items, e.g., their category. From a technical viewpoint, Graph Neural Networks (GNN) are a common choice for such  problem settings, as these types of neural networks allow us to integrate various types of heterogeneous information in a natural way. Unfortunately, in the existing literature a variety of evaluation settings are used, e.g., in terms of protocols, metrics and baselines, which makes it difficult to assess what represents the state-of-the-art in hybrid session-based recommendation.  In this work, we present the results of an independent evaluation of a seven GNN-based approaches that were recently published in high-quality outlets. To ensure a fair comparison, all models are systematically tuned and tested under identical conditions using three commonly used datasets. We furthermore include k-nearest-neighbor (kNN) models as baselines, as such models have previously exhibited competitive performance results for similar settings. To our surprise, the evaluation showed that the kNN models, which do not rely on side information, outperform <em>all but one</em> GNN models in terms of the Mean Reciprocal Rank, which we used as optimization criterion, and were only outperformed in three cases in terms of the Hit Rate. Our results therefore <em>(a)</em> point to continuing issues in the community in terms of research methodology and <em>(b)</em> indicate that there is ample room for improvement in hybrid session-based recommendation.
+		         The performance of a recommender system algorithm in terms of common offline accuracy measures often strongly depends on the chosen hyperparameters. Therefore, when comparing algorithms in offline experiments, we can obtain reliable insights regarding the effectiveness of a newly proposed algorithm only if we compare it to a number of state-of-the-art baselines that are carefully tuned for each of the considered datasets. While this fundamental principle of any area of applied machine learning is undisputed, we find that the tuning process for the baselines in the current literature is barely documented in much of today's published research. Ultimately, in case the baselines are actually not carefully tuned, progress may remain unclear. In this paper, we showcase how every method in such an unsound comparison can be reported to be outperforming the state-of-the-art. Finally, we iterate appropriate research practices to avoid unreliable algorithm comparisons in the future. 
 		</p>
 		
 	</div>
