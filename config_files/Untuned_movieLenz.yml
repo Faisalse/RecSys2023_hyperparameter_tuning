@@ -1,0 +1,115 @@
+experiment:
+  dataset: movielens_1m
+  data_config:
+    strategy: dataset
+    dataset_path: ../data/{0}/dataset.tsv
+  prefiltering:
+    - strategy: global_threshold
+      threshold: 4
+    - strategy: iterative_k_core
+      core: 10
+  binarize: True
+  splitting:
+    save_on_disk: True
+    save_folder: ../data/{0}/splitting/
+    test_splitting:
+      test_ratio: 0.2
+      strategy: random_subsampling
+      folds: 5
+  top_k: 50
+  evaluation:
+    cutoffs: [10, 20, 50]
+    simple_metrics: [nDCG, MAP, MRR, Precision, Recall,F1,HR]
+  gpu: 0
+  external_models_path: ../external/models/__init__.py
+  models:
+    GMF:
+      meta:
+        verbose: True
+        save_recs: True
+      epochs: 15
+      batch_size: 512
+      mf_factors: 256
+      lr: 0.5
+      is_edge_weight_train: True
+    NeuMF: #from the original paper + Rendle
+      meta:
+        verbose: True
+        save_recs: True
+      mf_factors:  256
+      dropout: 0
+      is_mf_train: True
+      is_mlp_train: True
+      batch_size: 256
+      epochs: 10
+      lr: 0.5
+      m: [8]
+    MultiVAE: 
+      meta:
+        verbose: True
+        save_recs: True
+      lr: 0.6
+      epochs: 10
+      batch_size: 256         
+      intermediate_dim: 800
+      latent_dim: 400
+      dropout_pkeep: 0.5
+      reg_lambda: 0.6
+    NGCF:
+      meta:
+        save_recs: True
+      lr: 0.09
+      epochs: 15
+      batch_size: 512
+      factors: 64
+      batch_size: 512
+      l_w: 0.4
+      weight_size: (64,)
+      node_dropout: ()
+      message_dropout: (0.4,) 
+    MultiDAE:
+      meta:
+        save_recs: True
+        verbose: True
+      epochs: 5
+      batch_size: 1024
+      intermediate_dim: 600
+      latent_dim: 200
+      reg_lambda: 0.6
+      lr: 0.7
+      dropout_pkeep: 1
+    ConvNeuMF:
+      meta:
+        save_recs: True
+        verbose: True
+      epochs: 10
+      batch_size: 16
+      embedding_size: 50
+      lr: 0.06
+      l_w: 0.05
+      l_b: 0.08
+      cnn_channels: (1, 16, 16)
+      cnn_kernels: (2,2)
+      cnn_strides: (2,2)
+      dropout_prob: 0.5
+    ConvMF:
+      meta:
+        save_recs: True
+        verbose: True
+      epochs: 10
+      batch_size: 32
+      embedding_size: 100
+      lr: 0.05
+      l_w: 0.03
+      l_b: 0.04
+      cnn_channels: (1, 16, 16)
+      cnn_kernels: (2,2)
+      cnn_strides: (2,2)
+      dropout_prob: 0.4
+    EASER: 
+      meta:
+        verbose: True
+        save_recs: True
+        hyper_max_evals: 20
+        hyper_opt_alg: tpe
+      l2_norm: 3.72

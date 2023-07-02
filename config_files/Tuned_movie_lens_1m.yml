@@ -1,0 +1,143 @@
+experiment:
+  dataset: movielens_1m
+  data_config:
+    strategy: dataset
+    dataset_path: ../data/{0}/dataset.tsv
+  prefiltering:
+    - strategy: global_threshold
+      threshold: 4
+    - strategy: iterative_k_core
+      core: 10
+  binarize: True
+  splitting:
+    save_on_disk: True
+    save_folder: ../data/{0}/splitting/
+    test_splitting:
+      test_ratio: 0.2
+      strategy: random_subsampling
+      folds: 5
+  top_k: 50
+  evaluation:
+    cutoffs: [10, 20, 50]
+    simple_metrics: [nDCG, MAP, MRR, Precision, Recall,F1,HR]
+  gpu: 0
+  external_models_path: ../external/models/__init__.py
+  models:
+    ConvMF:
+      epochs: [15, 25]
+      batch_size: [16] 
+      embedding_size: [50, 64, 100]
+      lr: [0.0001, 0.0005, 0.001, 0.003]
+      l_w: [0.0001, 0.001, 0.0005,  0.1]
+      l_b: [0.01, 0.001,0.0001, 0.00001]
+      cnn_channels: (1, 32, 32)
+      cnn_kernels: (2,2)
+      cnn_strides: (2,2)
+      dropout_prob: [0.2, 0.3, 0.45]
+      meta:
+        verbose: True
+        hyper_max_evals: 10
+        hyper_opt_alg: tpe
+        save_recs: True
+    ConvNeuMF:
+      epochs: [20, 30]
+      batch_size: [16, 32] 
+      embedding_size: [16, 32]
+      lr: [0.0001, 0.0005, 0.001]
+      l_w: [0.0001, 0.001, 0.0005]
+      l_b: [0.01, 0.001,0.0001, 0.00001]
+      cnn_channels: (1, 16, 16)
+      cnn_kernels: (2,2)
+      cnn_strides: (2,2)
+      dropout_prob: [0.7]
+      meta:
+        verbose: True
+        hyper_max_evals: 20
+        hyper_opt_alg: tpe
+        save_recs: True
+    GMF:
+      meta:
+        hyper_max_evals: 20
+        hyper_opt_alg: tpe
+        verbose: True
+        save_recs: True
+      epochs: [30, 40, 50]
+      batch_size: [128, 256, 512]
+      mf_factors: [8, 16, 32, 64, 128, 256]
+      lr: [loguniform, -11.512925464970229, 0]
+      is_edge_weight_train: True
+    NGCF:
+      meta:
+        hyper_max_evals: 20
+        hyper_opt_alg: tpe
+        verbose: True
+        save_recs: True
+      lr: [loguniform, -11.512925464970229, 0]
+      epochs: [30, 40, 50]
+      batch_size: [64, 128, 256, 512]
+      factors: [8, 16, 32, 64, 128, 256]
+      batch_size: 256
+      l_w: [loguniform, -11.512925464970229, 0]
+      weight_size: (64,)
+      node_dropout: (0.1,0.2, 0.3, 0.45, 0.5)
+      message_dropout: (0.1,0.2, 0.3, 0.45, 0.5,)
+    NeuMF:
+      meta:
+        hyper_max_evals: 50
+        hyper_opt_alg: tpe
+        verbose: True
+        save_recs: True
+      mf_factors:  [64, 128, 256]
+      dropout: 0
+      is_mf_train: True
+      is_mlp_train: True
+      batch_size: [64, 128, 256]
+      epochs: [quniform, 30, 100, 1]
+      lr: [loguniform, -11.512925464970229, 0]
+      m: [4,6,8]
+    MultiVAE: 
+      meta:
+        hyper_max_evals: 50
+        hyper_opt_alg: tpe
+        save_recs: True
+        verbose: True
+      lr: [loguniform, -11.512925464970229, 0]
+      epochs: [quniform, 100, 300, 1]
+      batch_size: [64, 128, 256]         
+      intermediate_dim: [quniform, 400, 800, 1]
+      latent_dim: [quniform, 100, 400, 1]
+      dropout_pkeep: 0.5
+      reg_lambda: [loguniform, -11.512925464970229, 0] 
+    DMF:
+      epochs: [30, 50]
+      batch_size: [16, 32] 
+      lr: [0.0001, 0.0005, 0.001]
+      reg: [0.01, 0.001,0.0001, 0.00005]
+      user_mlp: (64,32)
+      item_mlp: (64,32)
+      similarity: cosine
+      meta:
+        hyper_max_evals: 10
+        hyper_opt_alg: tpe
+        save_recs: True
+        verbose: True
+    MultiDAE:
+      meta:
+        verbose: True
+        hyper_max_evals: 25
+        hyper_opt_alg: tpe
+        save_recs: True
+      epochs: [20, 30, 40]
+      batch_size: [32, 64, 128, 256, 512]
+      intermediate_dim: 600
+      latent_dim: [100, 200, 300]
+      reg_lambda: 0.01
+      lr: [0.0001, 0.0005,0.003, 0.001]
+      dropout_pkeep: 1
+    EASER: 
+      meta:
+        verbose: True
+        save_recs: True
+        hyper_max_evals: 20
+        hyper_opt_alg: tpe
+      l2_norm: [loguniform, 2.72, 16]

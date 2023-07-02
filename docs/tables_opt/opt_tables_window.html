@@ -1,0 +1,830 @@
+	<ul class="nav nav-tabs" id="tables_tabs">
+		<li class="active"><a href="#opt-CM_HGNN" data-toggle="tab" aria-expanded="true">CMHGNN</a></li>
+		<li class=""><a href="#opt-MGS" data-toggle="tab" aria-expanded="true">MGS</a></li>
+		<li class=""><a href="#opt-GNRRW" data-toggle="tab" aria-expanded="true">GNRRW</a></li>
+		<li class=""><a href="#opt-TAGNN" data-toggle="tab" aria-expanded="true">TAGNN</a></li>
+		<li><a href="#opt-COTREC" data-toggle="tab" aria-expanded="true">COTREC</a></li>
+		<li><a href="#opt-FLCSP" data-toggle="tab" aria-expanded="true">FLCSP</a></li>
+		
+		<li><a href="#opt-GCEGNN" data-toggle="tab" aria-expanded="true">GCEGNN</a></li>
+		<li><a href="#opt-VSKNN" data-toggle="tab" aria-expanded="true">VSKNN</a></li>
+		<li><a href="#opt-STAN" data-toggle="tab" aria-expanded="true">STAN</a></li>
+		<li><a href="#opt-VSTAN" data-toggle="tab" aria-expanded="true">VSTAN</a></li>
+		
+	</ul>
+	<div class="tab-content">
+		<div id="opt-CM_HGNN" class="tab-pane fade active in">
+			
+			<h3>Hyperparameters for <span class="caps">CMHGNN</span></h3>
+			<p>
+				We tested the following hyperparameter space:
+			</p>
+			<table class="hyper-space">
+				<tbody>
+                <tr>
+					<th>Parameter</th>
+					<th>Ranges</th>
+					<th>Steps</th>
+		</tr>
+		<tr>
+					<td>Learning Rateate</td>
+					<td align="right">[0.01 to 0.0001]</td>
+					<td align="right">20</td>
+					
+		</tr>
+                <tr>
+					<td>Batch Size</td>
+					<td align="right">[20, 50, 100]</td>
+					
+					<td align="right">3</td>
+                </tr>
+		<tr>
+					<td>Embedding Size</td>
+					<td align="right">[30, 50, 70, 100, 120]</td>
+				
+					<td align="right">3</td>
+		</tr>
+		<tr>
+					<td>L2 Penality</td>
+					<td align="right">[0.0001, 0.00001]</td>
+					<td align="right">2</td>
+		</tr>
+					
+		
+                
+			</tbody></table>
+			<br>
+			<table class="hyper-params">
+							
+				<tbody>
+                <tr>
+					<th>Dataset</th>
+					<th>Learning Rate</th>
+					<th>Batch Size</th>
+					<th>Embedding</th>
+					<th>L2 Penality</th>
+					<th>Epoch</th>
+					
+		</tr>	
+					
+		<tr>
+					<th>Diginetica</th>
+					<th>0.0003</th>
+					<th>100</th>
+					<th>30</th>
+					<th>0.00001</th>
+			                <th>10</th>
+					
+		</tr>
+					
+		<tr>
+					<th>RSC15</th>
+					<th>0.0006</th>
+					<th>20</th>
+					<th>50</th>
+					<th>0.00001</th>
+			                <th>5</th>
+					
+		</tr>
+					
+		<tr>
+					<th>Retail Rocket</th>
+					<th>0.0006</th>
+					<th>50</th>
+					<th>100</th>
+					<th>0.00001</th>
+			                <th>15</th>
+					
+		</tr>
+					
+					
+					
+				
+			</tbody></table>
+			<br>
+						
+		</div>
+		<div id="opt-MGS" class="tab-pane fade">
+
+			<h3>Hyperparameters for <span class="caps">MGS</span></h3>
+			<p>
+				We tested the following hyperparameter space:
+			</p>
+			<table class="hyper-space">
+				<tbody>
+                <tr>
+					<th>Parameter</th>
+					<th>Ranges</th>
+					<th>Steps</th>
+				</tr>
+				<tr>
+					<td>Learning Rate</td>
+					<td align="right">[0.01 to 0.0001]</td>
+					<td align="right">10</td>
+				</tr>
+                <tr>
+					<td>Batch Size</td>
+					<td align="right">[16, 32, 64, 128, 256]</td>
+					<td align="right">-</td>
+                </tr>
+				<tr>
+					<td>L2 Penality</td>
+					<td align="right">[0.00001, 0.0001, 0.000001, 0.001]</td>
+					<td align="right">-</td>
+					
+				</tr>
+				<tr>
+					<td>Dropout</td>
+					<td align="right">[0.1,0.2,0.3, 0.5]</td>
+					<td align="right">-</td>
+					
+				</tr>
+			</tbody></table>
+			<br>
+			<table class="hyper-params">
+
+				<tbody>
+       
+					
+				<tr>
+					<th>Dataset</th>
+					<th>Learning Rate</th>
+					<th>Batch Size</th>
+					<th>L2 Penality</th>
+					<th>Dropout</th>
+					<th>Epochs</th>
+				</tr>
+					
+				
+				<tr>
+					<th>Diginetica</th>
+					<th>0.0045</th>
+					<th>128</th>
+					<th>0.0001</th>
+					<th>0.3</th>
+					<th>10</th>
+				</tr>
+					
+				<tr>
+					<th>RSC15</th>
+					<th>0.0045</th>
+					<th>128</th>
+					<th>0.0001</th>
+					<th>0.3</th>
+					<th>12</th>
+				</tr>
+				
+				<tr>
+					<th>Retail Rocket</th>
+					<th>0.0034</th>
+					<th>64</th>
+					<th>0.0001</th>
+					<th>0.5</th>
+					<th>15</th>
+				</tr>
+			</tbody></table>
+			<br>
+		</div>
+		<div id="opt-GNRRW" class="tab-pane fade">
+
+			<h3>Hyperparameters for <span class="caps">GNRRW</span></h3>
+			<p>
+				We tested the following hyperparameter space:
+			</p>
+			<table class="hyper-space">
+				<tbody>
+                <tr>
+					<th>Parameter</th>
+					<th>Ranges</th>
+					
+				</tr>
+				<tr>
+					<td>Learning Rate</td>
+					<td align="right">[0.01 to 0.0001]</td>
+					
+					
+				</tr>
+					
+				<tr>
+					<td>Batch Size</td>
+					<td align="right">[20, 32, 100, 128, 200]</td>
+					
+				</tr>
+				
+				<tr>
+					<td>Hidden Size</td>
+					<td align="right">[20, 32, 100, 128, 200]</td>
+					
+				</tr>
+					
+				
+				<tr>
+					<td>L2 Penality</td>
+					<td align="right">[0.00001, 0.00001]</td>
+					
+				</tr>
+					
+				<tr>
+					<td>Epochs</td>
+					<td align="right">30</td>
+				</tr>	
+			</tbody></table>
+			<br>
+			<table class="hyper-params">
+
+				<tbody>
+                		<tr>
+					<th>Dataset</th>
+					<th>Learning Rate</th>
+					<th>Batch Size</th>
+					<th>Hidden Size</th>
+					<th>L2 Penality</th>
+					<th>Epochs</th>
+				</tr>
+					
+				<tr>
+					<th>Diginetica</th>
+					<th>0.0045</th>
+					<th>200</th>
+					<th>16</th>
+					<th>0.00001</th>
+					<th>10</th>
+				</tr>
+					
+					
+				<tr>
+					<th>RSC15</th>
+					<th>0.0012</th>
+					<th>128</th>
+					<th>32</th>
+					<th>0.00001</th>
+					<th>15</th>
+				</tr>
+					
+				<tr>
+					<th>Retail Rocket</th>
+					<th>0.0045</th>
+					<th>128</th>
+					<th>200</th>
+					<th>0.00001</th>
+					<th>20</th>
+				</tr>
+
+			</tbody></table>
+			<br>
+
+		</div>
+		<div id="opt-TAGNN" class="tab-pane fade">
+			<h3>Hyperparameters for <span class="caps">TAGNN</span></h3>
+			<p>
+				We tested the following hyperparameter space:
+			</p>
+			<table class="hyper-space">
+				<tbody>
+				<tr>
+					<th>Parameter</th>
+					<th>Ranges</th>
+					
+				</tr>
+				<tr>
+					<td>Learning Rate</td>
+					<td align="right">[0.01 to 0.0001]</td>
+					
+				</tr>
+				<tr>
+					<td>Batch Size</td>
+					<td align="right">[20, 32, 100, 128, 200]</td>
+					
+				</tr>
+					
+				<tr>
+					<td>Embedding Size</td>
+					<td align="right">[50, 100, 150]</td>
+					
+				</tr>
+					
+				<tr>
+					<td>L2 Penality</td>
+					<td align="right">[0.00001, 0.0001]</td>
+					
+				</tr>
+					
+				<tr>
+					<td>Epoch</td>
+					<td align="right">30</td>
+					
+				</tr>
+                
+			</tbody></table>
+			<br>
+			
+			
+			<table class="hyper-params">
+				<tbody>
+                <tr>
+					<th>Dataset</th>
+					<th>Learning Rate</th>
+					<th>Batch Size</th>
+					<th>Embedding Size</th>
+		                        <th>L2 Penality</th>
+			                <th>Epoch</th>
+		</tr>
+					
+		<tr>
+					<th>Diginetica</th>
+					<th>0.0007</th>
+					<th>100</th>
+					<th>100</th>
+		                        <th>0.00001</th>
+			                <th>4</th>
+		</tr>
+					
+		<tr>
+					<th>RSC15</th>
+					<th>0.0007</th>
+					<th>128</th>
+					<th>100</th>
+		                        <th>0.00001</th>
+			                <th>5</th>
+		</tr>
+					
+		<tr>
+					<th>Retail Rocket</th>
+					<th>0.005</th>
+					<th>100</th>
+					<th>100</th>
+		                        <th>0.00001</th>
+			                <th>20</th>
+		</tr>
+			    
+				
+			</tbody></table>
+			<br>
+			
+		
+
+		</div>
+		
+		
+		<div id="opt-COTREC" class="tab-pane fade">
+
+			<p>
+				<h3>Hyperparameters for <span class="caps">COTREC</span></h3>
+			</p>
+			<p>
+				We tested the following hyperparameter space:
+			</p>
+			<table class="hyper-space">
+				<tbody>
+				<tr>
+					<th>Parameter</th>
+					<th>Ranges</th>
+					
+				</tr>
+				<tr>
+					<td>Learning Rate</td>
+					<td align="right">[0.01 to 0.0001]</td>
+					
+				</tr>
+				<tr>
+					<td>Batch Size</td>
+					<td align="right">[20, 32, 64, 100, 128]</td>
+					
+				</tr>
+					
+					
+				<tr>
+					<td>L2 Penality</td>
+					<td align="right">[0.00001, 0.0001]</td>
+					
+				</tr>
+					
+				<tr>
+					<td>Dropout</td>
+					<td align="right">[0, 0.1, 0.2, 0.4, 0.5, 0.6]</td>
+					
+				</tr>
+					
+				<tr>
+					<td>Epoch</td>
+					<td align="right">30</td>
+					
+				</tr>
+                
+			</tbody></table>
+			<br>
+			
+		<br>
+			
+			
+		<table class="hyper-params">
+		<tbody>
+			
+                <tr>
+					<th>Dataset</th>
+					<th>Learning Rate</th>
+					<th>Batch Size</th>
+					<th>Dropout</th>
+		                        <th>L2 Penality</th>
+			                <th>Epoch</th>
+		</tr>
+					
+		<tr>
+					<th>Diginetica</th>
+					<th>0.0045</th>
+					<th>128</th>
+					<th>0.3</th>
+		                        <th>0.0001</th>
+			                <th>12</th>
+		</tr>
+							
+		</tbody></table>
+
+		</div>
+		<div id="opt-FLCSP" class="tab-pane fade">
+			<h3>Hyperparameters for <span class="caps">FLCSP</span></h3>
+			<p>
+				We tested the following hyperparameter space:
+			</p>
+			<table class="hyper-space">
+				<tbody>
+				<tr>
+					<th>Parameter</th>
+					<th>Ranges</th>
+				</tr>
+					
+				<tr>
+					<th>Learning Rate</th>
+					<th>[0.01 to 0.0001]</th>
+				</tr>
+					
+				<tr>
+					<th>Batch Size</th>
+					<th>[20, 32, 100, 128, 200, 300]</th>
+				</tr>
+					
+				<tr>
+					<th>Embedding Size</th>
+					<th>[20, 32, 100, 128, 200, 300]</th>
+				</tr>
+					
+				<tr>
+					<th>Hidden Size</th>
+					<th>[100, 150, 200, 250, 300]</th>
+				</tr>
+					
+				<tr>
+					<th>L2 Penality</th>
+					<th>[0.0001, 0.00001]</th>
+				</tr>
+				
+				<tr>
+					<th>Dropout</th>
+					<th>[0.1,0.2,0.3, 0.4, 0.5]</th>
+				</tr>
+				
+               
+			</tbody></table>
+			<br>
+			
+		<table class="hyper-params">
+		<tbody>
+		
+		<tr>
+					<th>Dataset</th>
+					<th>Learning Rate</th>
+					<th>Batch Size</th>
+					<th>Embedding Size</th>
+		                        <th>Hidden Size</th>
+			                <th>Dropout</th>
+			                <th>L2 Penality</th>
+			                <th>Epoch</th>
+			                
+		</tr>
+		
+                <tr>
+					<th>DIGI</th>
+					<th>0.001</th>
+					<th>100</th>
+					<th>50</th>
+		                        <th>100</th>
+			                <th>0.1</th>
+			                <th>0.00001</th>
+			                <th>10</th>
+		</tr>
+					
+		<tr>
+					<th>RSC15</th>
+					<th>0.0005</th>
+					<th>300</th>
+					<th>150</th>
+		                        <th>50</th>
+			                <th>0.2</th>
+			                <th>0.000001</th>
+			                <th>20</th>
+		</tr>
+			
+		
+							
+		</tbody></table>
+			
+		</div>
+			
+			
+			
+		<div id="opt-GCEGNN" class="tab-pane fade">
+
+			<h3>Hyperparameters for <span class="caps">GCEGNN</span></h3>
+			<p>
+				We pick up the hyperparameters of GCEGNN from original paper due its high time complexity
+			</p>	
+			<br>
+		</div>
+			
+		
+		
+			
+		<div id="opt-VSKNN" class="tab-pane fade">
+
+			<h3>Hyperparameters for <span class="caps">VSKNN</span></h3>
+			
+			<p>
+				We tested the following hyperparameter space:
+			</p>
+			
+			<table class="hyper-space">
+				<tbody>
+				<tr>
+					<th>Parameter</th>
+					<th>Options</th>
+				</tr>
+					
+				<tr>
+					<td>Number of Neighbors</td>
+                    			<td align="right">[50, 100, 500, 600, 700, 800, 1000, 1300, 1500, 1700, 2000, 2500, 2800, 3000]</td>
+				</tr>
+					
+				<tr>
+					<td>Sample Size</td>
+                    			<td align="right">[500, 800, 1000, 2000, 2500, 4000,  5000, 7000, 8000, 10000]</td>
+				</tr>
+					
+                		<tr>
+                    			<td>Weighting</td>
+                    			<td align="right">[Same, Div, Linear, Quadratic, Log]</td>
+				</tr>
+					
+				<tr>
+                    			<td>Weighting Score</td>
+                    			<td align="right">[Same, Div, Linear, Quadratic, Log]</td>
+				</tr>
+					
+				<tr>
+                    			<td>IDF Weighting</td>
+                    			<td align="right">[False, 1, 2, 5, 10, 20]</td>
+				</tr>
+					
+			</tbody></table>
+			<br>
+			<table class="hyper-params">
+
+				<tbody>
+					
+                		<tr>
+					<th>Dataset</th>
+					<th>Number of Neighbors</th>
+					<th>Sample Size</th>
+					<th>Weighting</th>
+					<th>Weighting Score</th>
+					<th>IDF_Weighting</th>
+				</tr>
+					
+			        <tr>
+					<td>RSC15</td><!--dataset -->
+					<td align="right">1500</td><!--neighbors -->
+					<td align="right">10000</td><!--sample-size -->
+					<td align="right">Log</td><!--weighting -->
+					<td align="right">Quadratic</td><!--weighting_score -->
+					<td align="right">20</td><!--idf_weighting -->
+				</tr>
+					
+			        <tr>
+                			<td>RETAILROCKET</td>
+					<td align="right">600</td><!--neighbors -->
+					<td align="right">800</td><!--sample-size -->
+					<td align="right">Same</td><!--weighting -->
+					<td align="right">Div</td><!--weighting_score -->
+					<td align="right">5</td><!--idf_weighting -->
+				</tr>
+					
+                		<tr>
+                			<td>DIGI</td><!--dataset -->
+					<td align="right">50</td><!--neighbors -->
+					<td align="right">500</td><!--sample-size -->
+					<td align="right">Quadratic</td><!--weighting -->
+					<td align="right">Quadratic</td><!--weighting_score -->
+					<td align="right">2</td><!--idf_weighting -->
+				</tr>		
+			</tbody></table>
+			<br>
+
+		</div>
+		<div id="opt-STAN" class="tab-pane fade">
+			<h3>Hyperparameters for <span class="caps">STAN</span></h3>
+			
+			<p>
+				We tested the following hyperparameter space:
+			</p>
+			
+		        <table class="hyper-space">
+				<tbody>
+					
+				<tr>
+					<th>Parameter</th>
+					<th>Options</th>
+				</tr>
+					
+				<tr>
+					<td>Number of Neighbors</td>
+                    			<td align="right">[50, 100, 500, 600, 700, 800, 1000, 1300, 1400, 1500, 1700,  2000, 2500, 2800, 3000]</td>
+				</tr>
+					
+				<tr>
+					<td>Sample Size</td>
+                    			<td align="right">[500, 600, 1000, 1100, 2500, 1900, 5000, 7000, 8000, 10000]</td>
+				</tr>
+					
+                		<tr>
+                    			<td>lambda_spw</td>
+                    			<td align="right">[0.91, 0.92, 0.93, 0.94, 0.95, 0.96, 0.97, 0.98, 0.99, 0.11, 0.12, 0.101, 0.102, 0.103, 0.104, 0.105, 0.106, 0.107, 0.108, 0.15, 0.16, 1.2, 1.8, 2.4]</td>
+				</tr>
+					
+				<tr>
+                    			<td>lambda_snh</td>
+                    			<td align="right">[50, 57, 80, 100, 150, 200, 400, 450, 470, 500, 520, 530, 600]</td>
+				</tr>
+					
+				<tr>
+                    			<td>lambda_inh</td>
+                    			<td align="right">[0.5, 0.51, 0.52, 0.53, 0.54, 0.55, 0.56, 0.57, 0.58, 1.8, 2, 2.5, 2.8, 3, 3.5, 3.8, 4]</td>
+				</tr>
+					
+			</tbody></table>
+			<br>
+			<table class="hyper-params">
+
+				<tbody>
+                		<tr>
+					<th>Dataset</th>
+					<th>Number of Neighbors</th>
+					<th>Sample Size</th>
+					<th>lambda_spw</th>
+					<th>lambda_snh</th>
+					<th>lambda_inh</th>
+				</tr>
+					
+				<tr>
+                			<td>RSC15 (1/64)</td>
+					<td align="right">1400</td><!--neighbors -->
+					<td align="right">1900</td><!--sample-size -->
+					<td align="right">0.12</td><!--weighting -->
+					<td align="right">470</td><!--weighting_score -->
+					<td align="right">0.57</td><!--idf_weighting -->
+				</tr>
+					
+				<tr>
+                			<td>RSC15 (1/12)</td>
+					<td align="right">2700</td><!--neighbors -->
+					<td align="right">1000</td><!--sample-size -->
+					<td align="right">0.103</td><!--weighting -->
+					<td align="right">57</td><!--weighting_score -->
+					<td align="right">3.8</td><!--idf_weighting -->
+				</tr>
+				
+				<tr>
+                			<td>DIGI</td><!--dataset -->
+					<td align="right">700</td><!--neighbors -->
+					<td align="right">2800</td><!--sample-size -->
+					<td align="right">0.12</td><!--weighting -->
+					<td align="right">400</td><!--weighting_score -->
+					<td align="right">0.58</td><!--idf_weighting -->
+				</tr>
+					
+			        <tr>
+					<td>RSC15</td><!--dataset -->
+					<td align="right">600</td><!--neighbors -->
+					<td align="right">3000</td><!--sample-size -->
+					<td align="right">0.16</td><!--weighting --> 
+					<td align="right">530</td><!--weighting_score -->
+					<td align="right">0.57</td><!--idf_weighting -->
+				</tr>
+               
+                	
+					
+			</tbody></table>
+			
+			<br>
+
+		</div>
+	
+	<div id="opt-VSTAN" class="tab-pane fade">
+
+			<h3>Hyperparameters for <span class="caps">VSTAN</span></h3>
+			<p>
+				We tested the following hyperparameter space:
+			</p>
+			
+		        <table class="hyper-space">
+				<tbody>
+					
+				<tr>
+					<th>Parameter</th>
+					<th>Options</th>
+				</tr>
+					
+				<tr>
+					<td>Number of Neighbors</td>
+                    			<td align="right">[50, 100, 500, 600, 700, 800, 1000, 1300, 1500, 1700, 2000, 2500, 2800, 3000]</td>
+				</tr>
+					
+				<tr>
+					<td>Sample Size</td>
+                    			<td align="right">[500, 600, 800, 1000, 1800, 2500, 2200, 4000, 5000, 7000, 8000, 10000]</td>
+				</tr>
+					
+                		<tr>
+                    			<td>lambda_spw</td>
+                    			<td align="right">[0.91, 0.92, 0.93, 0.94, 0.95, 0.96, 0.97, 0.98, 0.99, 0.11, 0.12, 0.101, 0.102, 0.103, 0.104, 0.105, 0.106, 0.107, 0.108, 0.15, 0.16, 1.2, 1.8, 2.4]</td>
+				</tr>
+					
+				<tr>
+                    			<td>lambda_snh</td>
+                    			<td align="right">[50,51, 55, 57, 71, 75, 80, 100, 150, 200, 400, 450, 470, 500, 520, 530, 600]</td>
+				</tr>
+					
+				<tr>
+                    			<td>lambda_inh</td>
+                    			<td align="right">[0.5, 0.51, 0.52, 0.53, 0.54, 0.55, 0.56, 0.57, 0.58, 1.8, 2, 2.4, 2.5, 2.8, 3, 3.5, 3.8, 4]</td>
+				</tr>
+					
+			</tbody></table>
+			<br>
+			<table class="hyper-params">
+
+				<tbody>
+                		<tr>
+					<th>Dataset</th>
+					<th>Number of Neighbors</th>
+					<th>Sample Size</th>
+					<th>lambda_spw</th>
+					<th>lambda_snh</th>
+					<th>lambda_inh</th>
+				</tr>
+					
+				<tr>
+                			<td>RSC15 (1/64)</td>
+					<td align="right">1500</td><!--neighbors -->
+					<td align="right">1800</td><!--sample-size -->
+					<td align="right">0.102</td><!--weighting -->
+					<td align="right">51</td><!--weighting_score -->
+					<td align="right">0.57</td><!--idf_weighting -->
+				</tr>
+					
+				<tr>
+                			<td>RSC15 (1/12)</td>
+					<td align="right">600</td><!--neighbors -->
+					<td align="right">2200</td><!--sample-size -->
+					<td align="right">0.102</td><!--weighting -->
+					<td align="right">57</td><!--weighting_score -->
+					<td align="right">3.8</td><!--idf_weighting -->
+				</tr>
+				
+				<tr>
+                			<td>DIGI</td><!--dataset -->
+					<td align="right">600</td><!--neighbors -->
+					<td align="right">800</td><!--sample-size -->
+					<td align="right">0.102</td><!--weighting -->
+					<td align="right">55</td><!--weighting_score -->
+					<td align="right">0.54</td><!--idf_weighting -->
+				</tr>
+					
+			        <tr>
+					<td>RSC15</td><!--dataset -->
+					<td align="right">600</td><!--neighbors -->
+					<td align="right">800</td><!--sample-size -->
+					<td align="right">0.94</td><!--weighting -->
+					<td align="right">55</td><!--weighting_score -->
+					<td align="right">2.4</td><!--idf_weighting -->
+				</tr>
+					
+			        
+					
+                		
+               
+                	
+					
+			</tbody></table>
+					
+
+		</div>
+    </div>
