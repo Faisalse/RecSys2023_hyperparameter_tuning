@@ -267,34 +267,37 @@
 					<th>Ranges</th>
 					
 				</tr>
+
+				<tr>
+					<td>Epochs</td>
+					<td align="right">[30, 40, 50]</td>
+					
+				</tr>
+					
 				<tr>
 					<td>Learning Rate</td>
-					<td align="right">[0.01 to 0.0001]</td>
+					<td align="right">[0.0001, 0.0005, 0.001]</td>
 					
 				</tr>
 				<tr>
 					<td>Batch Size</td>
-					<td align="right">[20, 32, 100, 128, 200]</td>
+					<td align="right">[128, 256, 512]</td>
 					
 				</tr>
 					
 				<tr>
-					<td>Embedding Size</td>
-					<td align="right">[50, 100, 150]</td>
+					<td>Mf_factors</td>
+					<td align="right">[8, 16, 32, 64, 128, 256]</td>
 					
 				</tr>
 					
 				<tr>
-					<td>L2 Penality</td>
-					<td align="right">[0.00001, 0.0001]</td>
+					<td>is_edge_weight_train</td>
+					<td align="right">True</td>
 					
 				</tr>
 					
-				<tr>
-					<td>Epoch</td>
-					<td align="right">30</td>
-					
-				</tr>
+			
                 
 			</tbody></table>
 			<br>
@@ -357,40 +360,58 @@
 			</p>
 			<table class="hyper-space">
 				<tbody>
+
 				<tr>
 					<th>Parameter</th>
 					<th>Ranges</th>
 					
 				</tr>
+
 				<tr>
-					<td>Learning Rate</td>
-					<td align="right">[0.01 to 0.0001]</td>
+					<td>Epoch</td>
+					<td align="right">[quniform, 30, 100, 1]</td>
+					
+				</tr>	
+
+				<tr>
+					<td>Learning rate</td>
+					<td align="right">[loguniform, -11.512925464970229, 0]</td>
+					
+				</tr>
+				
+				<tr>
+					<td>mf_factors</td>
+					<td align="right">[64, 128, 256]</td>
 					
 				</tr>
 				<tr>
 					<td>Batch Size</td>
-					<td align="right">[20, 32, 64, 100, 128]</td>
+					<td align="right">[64, 128, 256]</td>
 					
 				</tr>
 					
 					
 				<tr>
-					<td>L2 Penality</td>
-					<td align="right">[0.00001, 0.0001]</td>
+					<td>dropout</td>
+					<td align="right">0</td>
 					
 				</tr>
 					
 				<tr>
-					<td>Dropout</td>
-					<td align="right">[0, 0.1, 0.2, 0.4, 0.5, 0.6]</td>
-					
+					<td>is_mf_train</td>
+					<td align="right">True</td>	
 				</tr>
-					
+
 				<tr>
-					<td>Epoch</td>
-					<td align="right">30</td>
-					
+					<td>is_mlp_train</td>
+					<td align="right">True</td>	
 				</tr>
+
+				<tr>
+					<td>m</td>
+					<td align="right">[4,6,8]</td>	
+				</tr>
+				
                 
 			</tbody></table>
 			<br>
@@ -433,30 +454,35 @@
 					<th>Parameter</th>
 					<th>Ranges</th>
 				</tr>
+
+				<tr>
+					<th>Epoch</th>
+					<th>[20, 30]</th>
+				</tr>
 					
 				<tr>
 					<th>Learning Rate</th>
-					<th>[0.01 to 0.0001]</th>
+					<th>[0.0001, 0.0005, 0.001]</th>
 				</tr>
 					
 				<tr>
 					<th>Batch Size</th>
-					<th>[20, 32, 100, 128, 200, 300]</th>
+					<th>[16, 32]</th>
 				</tr>
 					
 				<tr>
 					<th>Embedding Size</th>
-					<th>[20, 32, 100, 128, 200, 300]</th>
+					<th>[16, 32]</th>
 				</tr>
 					
 				<tr>
-					<th>Hidden Size</th>
-					<th>[100, 150, 200, 250, 300]</th>
+					<th>l_w</th>
+					<th>[0.0001, 0.001, 0.0005]</th>
 				</tr>
 					
 				<tr>
-					<th>L2 Penality</th>
-					<th>[0.0001, 0.00001]</th>
+					<th>l_b</th>
+					<th>[0.01, 0.001,0.0001, 0.00001]</th>
 				</tr>
 				
 				<tr>
@@ -516,9 +542,55 @@
 		<div id="opt-ConvMF" class="tab-pane fade">
 
 			<h3>Hyperparameters for <span class="caps">ConvMF</span></h3>
-			<p>
-				We pick up the hyperparameters of GCEGNN from original paper due its high time complexity
-			</p>	
+
+
+			<table class="hyper-space">
+				<tbody>
+				<tr>
+					<th>Parameter</th>
+					<th>Ranges</th>
+				</tr>
+
+				<tr>
+					<th>Epoch</th>
+					<th>[20, 30]</th>
+				</tr>
+					
+				<tr>
+					<th>Learning Rate</th>
+					<th>[0.0001, 0.0005, 0.001, 0.003]</th>
+				</tr>
+					
+				<tr>
+					<th>Batch Size</th>
+					<th>[50, 64, 100]</th>
+				</tr>
+					
+				<tr>
+					<th>Embedding Size</th>
+					<th>[64, 128, 256]</th>
+				</tr>
+					
+				<tr>
+					<th>l_w</th>
+					<th>[0.0001, 0.001, 0.0005]</th>
+				</tr>
+					
+				<tr>
+					<th>l_b</th>
+					<th>[0.01, 0.001,0.0001, 0.00001]</th>
+				</tr>
+				
+				<tr>
+					<th>Dropout</th>
+					<th>[0.1,0.2,0.3, 0.4, 0.5]</th>
+				</tr>
+				
+               
+			</tbody></table>
+			<br>
+			
+				
 			<br>
 		</div>
 			
@@ -539,30 +611,35 @@
 					<th>Parameter</th>
 					<th>Options</th>
 				</tr>
-					
+
 				<tr>
-					<td>Number of Neighbors</td>
-                    			<td align="right">[50, 100, 500, 600, 700, 800, 1000, 1300, 1500, 1700, 2000, 2500, 2800, 3000]</td>
+					<th>Learning rate</th>
+					<th>[0.0001, 0.0005, 0.001, 0.003]</th>
 				</tr>
-					
+				
 				<tr>
-					<td>Sample Size</td>
-                    			<td align="right">[500, 800, 1000, 2000, 2500, 4000,  5000, 7000, 8000, 10000]</td>
+					<th>Epoch</th>
+					<th>[30, 40, 50]</th>
 				</tr>
-					
-                		<tr>
-                    			<td>Weighting</td>
-                    			<td align="right">[Same, Div, Linear, Quadratic, Log]</td>
-				</tr>
-					
+
 				<tr>
-                    			<td>Weighting Score</td>
-                    			<td align="right">[Same, Div, Linear, Quadratic, Log]</td>
+					<th>Batch Size</th>
+					<th>[64, 128, 256, 512]</th>
 				</tr>
-					
+
 				<tr>
-                    			<td>IDF Weighting</td>
-                    			<td align="right">[False, 1, 2, 5, 10, 20]</td>
+					<th>Factors</th>
+					<th>[8, 16, 32, 64, 128, 256]</th>
+				</tr>
+
+				<tr>
+					<th>node_dropout</th>
+					<th>[0.1,0.2, 0.3, 0.45, 0.5]</th>
+				</tr>
+
+				<tr>
+					<th>message_dropout</th>
+					<th>[0.1,0.2, 0.3, 0.45, 0.5]</th>
 				</tr>
 					
 			</tbody></table>
