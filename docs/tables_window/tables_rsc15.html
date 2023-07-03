@@ -2,8 +2,10 @@
 <p>You sort the results by clicking on the table headers.</p>
 <br />
 
-<table class="table table-bordered table-hover table-condensed">
-<thead><tr><th title="Field #1">Models / Top@10</th>
+<table class="sortable-theme-minimal" data-sortable>
+  
+<thead>
+<tr><th title="Field #1">Models / Top@10</th>
 <th title="Field #2">nDCG@10</th>
 <th title="Field #3">nDCG@20</th>
 <th title="Field #4">MAP@10</th>
@@ -16,9 +18,13 @@
 <th title="Field #11">Rec@20</th>
 <th title="Field #12">F1-score@10</th>
 <th title="Field #13">F1-score@20</th>
-</tr></thead>
-<tbody><tr>
-<td>EASER</td>
+</tr>
+</thead>
+
+  
+<tbody>
+<tr>
+<td class="caps algo">EASER</td>
 <td align="right">0.343</td>
 <td align="right">0.34</td>
 <td align="right">0.342</td>
@@ -32,8 +38,9 @@
 <td align="right">0.193</td>
 <td align="right">0.209</td>
 </tr>
+  
 <tr>
-<td>MultiDAE</td>
+<td class="caps algo">MultiDAE</td>
 <td align="right">0.3</td>
 <td align="right">0.303</td>
 <td align="right">0.295</td>
@@ -47,8 +54,9 @@
 <td align="right">0.173</td>
 <td align="right">0.189</td>
 </tr>
+  
 <tr>
-<td>MultiVAE</td>
+<td class="caps algo">MultiVAE</td>
 <td align="right">0.294</td>
 <td align="right">0.304</td>
 <td align="right">0.284</td>
@@ -62,8 +70,9 @@
 <td align="right">0.175</td>
 <td align="right">0.195</td>
 </tr>
+  
 <tr>
-<td>GMF</td>
+<td class="caps algo">GMF</td>
 <td align="right">0.28</td>
 <td align="right">0.282</td>
 <td align="right">0.278</td>
@@ -77,8 +86,9 @@
 <td align="right">0.159</td>
 <td align="right">0.177</td>
 </tr>
+  
 <tr>
-<td>NeuMF</td>
+<td class="caps algo">NeuMF</td>
 <td align="right">0.277</td>
 <td align="right">0.28</td>
 <td align="right">0.275</td>
@@ -92,6 +102,7 @@
 <td align="right">0.158</td>
 <td align="right">0.195</td>
 </tr>
+  
 <tr>
 <td>ConvNeuMF</td>
 <td align="right">0.225</td>
@@ -107,8 +118,9 @@
 <td align="right">0.122</td>
 <td align="right">0.139</td>
 </tr>
+  
 <tr>
-<td>Pop</td>
+<td class="caps algo">Pop</td>
 <td align="right">0.162</td>
 <td align="right">0.163</td>
 <td align="right">0.161</td>
@@ -122,6 +134,7 @@
 <td align="right">0.088</td>
 <td align="right">0.104</td>
 </tr>
+  
 <tr>
 <td>ConvMF</td>
 <td align="right">0.16</td>
@@ -137,8 +150,9 @@
 <td align="right">0.087</td>
 <td align="right">0.103</td>
 </tr>
+  
 <tr>
-<td>NGCF</td>
+<td class="caps algo">NGCF</td>
 <td align="right">0.1</td>
 <td align="right">0.097</td>
 <td align="right">0.101</td>
@@ -152,8 +166,9 @@
 <td align="right">0.052</td>
 <td align="right">0.057</td>
 </tr>
+  
 <tr>
-<td>Results with random parameters</td>
+<td >Results with random parameters</td>
 <td align="right"></td>
 <td align="right"></td>
 <td align="right"></td>
@@ -167,8 +182,9 @@
 <td align="right"></td>
 <td align="right"></td>
 </tr>
+  
 <tr>
-<td>EASER</td>
+<td class="caps algo">EASER</td>
 <td align="right">0.248</td>
 <td align="right">0.247</td>
 <td align="right">0.247</td>
@@ -182,8 +198,9 @@
 <td align="right">0.142</td>
 <td align="right">0.151</td>
 </tr>
+  
 <tr>
-<td>MultiDAE</td>
+<td class="caps algo">MultiDAE</td>
 <td align="right">0.071</td>
 <td align="right">0.074</td>
 <td align="right">0.069</td>
@@ -197,8 +214,9 @@
 <td align="right">0.041</td>
 <td align="right">0.05</td>
 </tr>
+  
 <tr>
-<td>ConvNeuMF</td>
+<td class="caps algo">ConvNeuMF</td>
 <td align="right">0.037</td>
 <td align="right">0.039</td>
 <td align="right">0.036</td>
@@ -212,8 +230,9 @@
 <td align="right">0.02</td>
 <td align="right">0.026</td>
 </tr>
+  
 <tr>
-<td>ConvMF</td>
+<td class="caps algo">ConvMF</td>
 <td align="right">0.022</td>
 <td align="right">0.02</td>
 <td align="right">0.024</td>
@@ -227,8 +246,9 @@
 <td align="right">0.008</td>
 <td align="right">0.009</td>
 </tr>
+  
 <tr>
-<td>NeuMF</td>
+<td class="caps algo">NeuMF</td>
 <td align="right">0.021</td>
 <td align="right">0.02</td>
 <td align="right">0.024</td>
@@ -243,7 +263,7 @@
 <td align="right">0.01</td>
 </tr>
 <tr>
-<td>GMF</td>
+<td class="caps algo">GMF</td>
 <td align="right">0.016</td>
 <td align="right">0.016</td>
 <td align="right">0.017</td>
@@ -257,34 +277,36 @@
 <td align="right">0.006</td>
 <td align="right">0.009</td>
 </tr>
+  
 <tr>
-<td>NGCF</td>
-<td align="right">0.013</td>
-<td align="right">0.013</td>
-<td align="right">0.015</td>
-<td align="right">0.012</td>
-<td align="right">0.042</td>
-<td align="right">0.046</td>
-<td align="right">0.011</td>
-<td align="right">0.009</td>
-<td align="right">0.005</td>
-<td align="right">0.009</td>
-<td align="right">0.006</td>
-<td align="right">0.007</td>
+<td class="caps algo">NGCF</td>
+<td class="num-4" align="right">0.013</td>
+<td class="num-4" align="right">0.013</td>
+<td class="num-4" align="right">0.015</td>
+<td class="num-4" align="right">0.012</td>
+<td class="num-4" align="right">0.042</td>
+<td class="num-4" align="right">0.046</td>
+<td class="num-4" align="right">0.011</td>
+<td class="num-4" align="right">0.009</td>
+<td class="num-4" align="right">0.005</td>
+<td class="num-4" align="right">0.009</td>
+<td class="num-4" align="right">0.006</td>
+<td class="num-4" align="right">0.007</td>
 </tr>
+  
 <tr>
-<td>MultiVAE</td>
-<td align="right">0.006</td>
-<td align="right">0.007</td>
-<td align="right">0.007</td>
-<td align="right">0.006</td>
-<td align="right">0.021</td>
-<td align="right">0.024</td>
-<td align="right">0.005</td>
-<td align="right">0.005</td>
-<td align="right">0.002</td>
-<td align="right">0.004</td>
-<td align="right">0.002</td>
-<td align="right">0.004</td>
+<td class="caps algo">MultiVAE</td>
+<td class="num-4" align="right">0.006</td>
+<td class="num-4" align="right">0.007</td>
+<td class="num-4" align="right">0.007</td>
+<td class="num-4" align="right">0.006</td>
+<td class="num-4" align="right">0.021</td>
+<td class="num-4" align="right">0.024</td>
+<td class="num-4" align="right">0.005</td>
+<td class="num-4" align="right">0.005</td>
+<td class="num-4" align="right">0.002</td>
+<td class="num-4" align="right">0.004</td>
+<td class="num-4" align="right">0.002</td>
+<td class="num-4" align="right">0.004</td>
 </tr>
 </tbody></table>		
