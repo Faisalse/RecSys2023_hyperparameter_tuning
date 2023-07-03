@@ -129,35 +129,35 @@
 				
 				<tr>
 					<th>MovieLens 1M</th>
-					<th>-</th>
-					<th>-</th>
-					<th>-</th>
-					<th>-</th>
-					<th>-</th>
-					<th>-</th>
-					<th>-</th>
+					<th>20</th>
+					<th>0.0005</th>
+					<th>128</th>
+					<th>600</th>
+					<th>100</th>
+					<th>0.01</th>
+					<th>1</th>
 				</tr>
 					
 				<tr>
 					<th>Amazon Digital Music</th>
-					<th>-</th>
-					<th>-</th>
-					<th>-</th>
-					<th>-</th>
-					<th>-</th>
-					<th>-</th>
-					<th>-</th>
+					<th>40</th>
+					<th>0.0005</th>
+					<th>512</th>
+					<th>600</th>
+					<th>300</th>
+					<th>0.01</th>
+					<th>1</th>
 				</tr>
 				
 				<tr>
 					<th>Epinions</th>
-					<th>-</th>
-					<th>-</th>
-					<th>-</th>
-					<th>-</th>
-					<th>-</th>
-					<th>-</th>
-					<th>-</th>
+					<th>40</th>
+					<th>0.0005</th>
+					<th>512</th>
+					<th>600</th>
+					<th>300</th>
+					<th>0.01</th>
+					<th>1</th>
 				</tr>
 			</tbody></table>
 			<br>
@@ -168,58 +168,8 @@
 		<div id="opt-MultiVAE" class="tab-pane fade">
 
 			<h3>Hyperparameters for <span class="caps">MultiVAE</span></h3>
-			<p>
-				We tested the following hyperparameter space:
-			</p>
-			<table class="hyper-space">
-				<tbody>
-                <tr>
-					<th>Parameter</th>
-					<th>Ranges</th>
-					
-				</tr>
-
-				<tr>
-					<td>Epochs</td>
-					<td align="right">[quniform, 100, 300, 1]</td>	
-				</tr>
-					
-				<tr>
-					<td>Learning Rate</td>
-					<td align="right">[loguniform, -11.512925464970229, 0]</td>	
-				</tr>
-
-				
-					
-				<tr>
-					<td>Batch Size</td>
-					<td align="right">[64, 128, 256] </td>
-					
-				</tr>
-				
-				<tr>
-					<td>intermediate_dim</td>
-					<td align="right">[quniform, 400, 800, 1]</td>	
-				</tr>
-					
-				
-				<tr>
-					<td>latent_dim</td>
-					<td align="right">[quniform, 100, 400, 1]</td>
-					
-				</tr>
-					
-				<tr>
-					<td>dropout_pkeep</td>
-					<td align="right">0.5</td>
-				</tr>
-
-				<tr>
-					<td>reg_lambda</td>
-					<td align="right">[loguniform, -11.512925464970229, 0]</td>
-				</tr>
-					
-			</tbody></table>
+		
+			
 			<br>
 			<table class="hyper-params">
 
@@ -562,36 +512,36 @@
 		
                 <tr>
 					<th>MovieLens 1M</th>
-					<th>-</th>
-			                <th>-</th>
-					<th>-</th>
-					<th>-</th>
-					<th>-</th>
-					<th>-</th>
-					<th>-</th>
+					<th>30</th>
+			                <th>0.0005</th>
+					<th>16</th>
+					<th>32</th>
+					<th>0.0001</th>
+					<th>0.01</th>
+					<th>0.7</th>
 					
 		</tr>
 					
 		<tr>
 					<th>Amazon Digital Music</th>
-					<th>-</th>
-			                <th>-</th>
-					<th>-</th>
-					<th>-</th>
-					<th>-</th>
-					<th>-</th>
-					<th>-</th>
+					<th>30</th>
+			                <th>0.0005</th>
+					<th>16</th>
+					<th>32-</th>
+					<th>0.0005</th>
+					<th>0.001</th>
+					<th>0.5</th>
 		</tr>
 
 		<tr>
 					<th>Epinions</th>
-					<th>-</th>
-			                <th>-</th>
-					<th>-</th>
-					<th>-</th>
-					<th>-</th>
-					<th>-</th>
-					<th>-</th>
+					<th>25</th>
+			                <th>0.0001</th>
+					<th>16</th>
+					<th>100</th>
+					<th>0.1</th>
+					<th>0.001</th>
+					<th>0.45</th>
 		</tr>
 			
 		
