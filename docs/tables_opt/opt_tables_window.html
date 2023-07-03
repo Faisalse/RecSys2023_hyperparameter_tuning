@@ -61,7 +61,7 @@
 		<br>		
 	</div>
 		
-	<div id="opt-MultiDAE" class="tab-pane fade">
+	<div id="opt-MultiDAE" class="table table-bordered table-hover table-condensed">
 		<h3>Hyperparameters for <span class="caps">MultiDAE</span></h3>
 		<p>
 			We tested the following hyperparameter space:
@@ -117,43 +117,53 @@
 		<tbody>	
 		<tr>
 					<th>Dataset</th>
+			                <th>Epoch</th>
 					<th>Learning Rate</th>
 					<th>Batch Size</th>
-					<th>L2 Penality</th>
-					<th>Dropout</th>
-					<th>Epochs</th>
+					<th>intermediate_dim</th>
+					<th>Latent_dim</th>
+					<th>reg_lambda</th>
+					<th>Dropout_pkeep</th>
 				</tr>
 					
 				
 				<tr>
-					<th>Diginetica</th>
-					<th>0.0045</th>
-					<th>128</th>
-					<th>0.0001</th>
-					<th>0.3</th>
-					<th>10</th>
+					<th>MovieLens 1M</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
 				</tr>
 					
 				<tr>
-					<th>RSC15</th>
-					<th>0.0045</th>
-					<th>128</th>
-					<th>0.0001</th>
-					<th>0.3</th>
-					<th>12</th>
+					<th>Amazon Digital Music</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
 				</tr>
 				
 				<tr>
-					<th>Retail Rocket</th>
-					<th>0.0034</th>
-					<th>64</th>
-					<th>0.0001</th>
-					<th>0.5</th>
-					<th>15</th>
+					<th>Epinions</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
 				</tr>
 			</tbody></table>
 			<br>
 		</div>
+
+
 		
 		<div id="opt-MultiVAE" class="tab-pane fade">
 
@@ -216,45 +226,56 @@
 				<tbody>
                 		<tr>
 					<th>Dataset</th>
+			                <th>Epoch</th>
 					<th>Learning Rate</th>
 					<th>Batch Size</th>
-					<th>Hidden Size</th>
-					<th>L2 Penality</th>
-					<th>Epochs</th>
+					<th>intermediate_dim</th>
+					<th>Latent_dim</th>
+					<th>reg_lambda</th>
+					<th>Dropout_pkeep</th>
+					
 				</tr>
 					
 				<tr>
-					<th>Diginetica</th>
-					<th>0.0045</th>
-					<th>200</th>
-					<th>16</th>
-					<th>0.00001</th>
-					<th>10</th>
+					<th>MovieLens 1M</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
 				</tr>
 					
 					
 				<tr>
-					<th>RSC15</th>
-					<th>0.0012</th>
-					<th>128</th>
-					<th>32</th>
-					<th>0.00001</th>
-					<th>15</th>
+					<th>Amazon Digital Music</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
 				</tr>
 					
 				<tr>
-					<th>Retail Rocket</th>
-					<th>0.0045</th>
-					<th>128</th>
-					<th>200</th>
-					<th>0.00001</th>
-					<th>20</th>
+					<th>Epinions</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
 				</tr>
 
 			</tbody></table>
 			<br>
 
 		</div>
+
+		
 		<div id="opt-GMF" class="tab-pane fade">
 			<h3>Hyperparameters for <span class="caps">GMF</span></h3>
 			<p>
@@ -289,16 +310,12 @@
 					<td>Mf_factors</td>
 					<td align="right">[8, 16, 32, 64, 128, 256]</td>
 					
-				</tr>
-					
+				</tr>	
 				<tr>
 					<td>is_edge_weight_train</td>
 					<td align="right">True</td>
 					
 				</tr>
-					
-			
-                
 			</tbody></table>
 			<br>
 			
@@ -307,38 +324,38 @@
 				<tbody>
                 <tr>
 					<th>Dataset</th>
+					<th>Epochs</th>
 					<th>Learning Rate</th>
 					<th>Batch Size</th>
-					<th>Embedding Size</th>
-		                        <th>L2 Penality</th>
-			                <th>Epoch</th>
+		                        <th>Mf_factors</th>
+			                <th>is_edge_weight_train</th>
 		</tr>
 					
 		<tr>
-					<th>Diginetica</th>
-					<th>0.0007</th>
-					<th>100</th>
-					<th>100</th>
-		                        <th>0.00001</th>
-			                <th>4</th>
+					<th>MovieLens 1M</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+		                        <th>-</th>
+			                <th>-</th>
 		</tr>
 					
 		<tr>
-					<th>RSC15</th>
-					<th>0.0007</th>
-					<th>128</th>
-					<th>100</th>
-		                        <th>0.00001</th>
-			                <th>5</th>
+					<th>Amazon Digital Music</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+		                        <th>-</th>
+			                <th>-</th>
 		</tr>
 					
 		<tr>
-					<th>Retail Rocket</th>
-					<th>0.005</th>
-					<th>100</th>
-					<th>100</th>
-		                        <th>0.00001</th>
-			                <th>20</th>
+					<th>Epinions</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+		                        <th>-</th>
+			                <th>-</th>
 		</tr>
 			    
 				
@@ -424,20 +441,54 @@
 			
                 <tr>
 					<th>Dataset</th>
-					<th>Learning Rate</th>
-					<th>Batch Size</th>
-					<th>Dropout</th>
-		                        <th>L2 Penality</th>
-			                <th>Epoch</th>
+					<th>Epoch</th>
+					<th>Learning rate</th>
+					<th>mf_factors</th>
+		                        <th>Batch Size</th>
+			                <th>dropout</th>
+			 		<th>is_mf_train</th>
+			                <th>is_mlp_train</th>
+			                <th>m</th>
 		</tr>
 					
 		<tr>
-					<th>Diginetica</th>
-					<th>0.0045</th>
-					<th>128</th>
-					<th>0.3</th>
-		                        <th>0.0001</th>
-			                <th>12</th>
+					<th>MovieLens 1M</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					
+		</tr>
+
+
+		<tr>
+					<th>Amazon Digital Music</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					
+		</tr>
+
+		<tr>
+					<th>Epinions</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					
 		</tr>
 							
 		</tbody></table>
@@ -499,36 +550,48 @@
 		
 		<tr>
 					<th>Dataset</th>
+					<th>Epoch</th>
 					<th>Learning Rate</th>
 					<th>Batch Size</th>
-					<th>Embedding Size</th>
-		                        <th>Hidden Size</th>
+		                        <th>Embedding Size</th>
+			                <th>l_w</th>
+			                <th>l_b</th>
 			                <th>Dropout</th>
-			                <th>L2 Penality</th>
-			                <th>Epoch</th>
 			                
 		</tr>
 		
                 <tr>
-					<th>DIGI</th>
-					<th>0.001</th>
-					<th>100</th>
-					<th>50</th>
-		                        <th>100</th>
-			                <th>0.1</th>
-			                <th>0.00001</th>
-			                <th>10</th>
+					<th>MovieLens 1M</th>
+					<th>-</th>
+			                <th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					
 		</tr>
 					
 		<tr>
-					<th>RSC15</th>
-					<th>0.0005</th>
-					<th>300</th>
-					<th>150</th>
-		                        <th>50</th>
-			                <th>0.2</th>
-			                <th>0.000001</th>
-			                <th>20</th>
+					<th>Amazon Digital Music</th>
+					<th>-</th>
+			                <th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+		</tr>
+
+		<tr>
+					<th>Epinions</th>
+					<th>-</th>
+			                <th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
 		</tr>
 			
 		
@@ -589,7 +652,59 @@
                
 			</tbody></table>
 			<br>
+
+			<table class="hyper-params">
+		<tbody>
+		
+		<tr>
+					<th>Dataset</th>
+					<th>Epoch</th>
+					<th>Learning Rate</th>
+					<th>Batch Size</th>
+		                        <th>Embedding Size</th>
+			                <th>l_w</th>
+			                <th>l_b</th>
+			                <th>Dropout</th>
+			                
+		</tr>
+		
+                <tr>
+					<th>MovieLens 1M</th>
+					<th>-</th>
+			                <th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					
+		</tr>
+					
+		<tr>
+					<th>Amazon Digital Music</th>
+					<th>-</th>
+			                <th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+		</tr>
+
+		<tr>
+					<th>Epinions</th>
+					<th>-</th>
+			                <th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+		</tr>
 			
+		
+							
+		</tbody></table>
 				
 			<br>
 		</div>
@@ -645,46 +760,57 @@
 			</tbody></table>
 			<br>
 			<table class="hyper-params">
-
-				<tbody>
-					
-                		<tr>
+		<tbody>
+		
+		<tr>
 					<th>Dataset</th>
-					<th>Number of Neighbors</th>
-					<th>Sample Size</th>
-					<th>Weighting</th>
-					<th>Weighting Score</th>
-					<th>IDF_Weighting</th>
-				</tr>
+					<th>Epoch</th>
+					<th>Learning Rate</th>
+					<th>Batch Size</th>
+		                        <th>Factors</th>
+			                <th>node_dropout</th>
+			                <th>message_dropout</th>
+			                
+			                
+		</tr>
+		
+                <tr>
+					<th>MovieLens 1M</th>
+					<th>-</th>
+			                <th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
 					
-			        <tr>
-					<td>RSC15</td><!--dataset -->
-					<td align="right">1500</td><!--neighbors -->
-					<td align="right">10000</td><!--sample-size -->
-					<td align="right">Log</td><!--weighting -->
-					<td align="right">Quadratic</td><!--weighting_score -->
-					<td align="right">20</td><!--idf_weighting -->
-				</tr>
 					
-			        <tr>
-                			<td>RETAILROCKET</td>
-					<td align="right">600</td><!--neighbors -->
-					<td align="right">800</td><!--sample-size -->
-					<td align="right">Same</td><!--weighting -->
-					<td align="right">Div</td><!--weighting_score -->
-					<td align="right">5</td><!--idf_weighting -->
-				</tr>
+		</tr>
 					
-                		<tr>
-                			<td>DIGI</td><!--dataset -->
-					<td align="right">50</td><!--neighbors -->
-					<td align="right">500</td><!--sample-size -->
-					<td align="right">Quadratic</td><!--weighting -->
-					<td align="right">Quadratic</td><!--weighting_score -->
-					<td align="right">2</td><!--idf_weighting -->
-				</tr>		
-			</tbody></table>
-			<br>
+		<tr>
+					<th>Amazon Digital Music</th>
+					<th>-</th>
+			                <th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					
+		</tr>
+
+		<tr>
+					<th>Epinions</th>
+					<th>-</th>
+			                <th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					<th>-</th>
+					
+		</tr>
+			
+		
+							
+		</tbody></table>
 
 		</div>
     </div>
