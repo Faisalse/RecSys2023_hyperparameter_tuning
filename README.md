@@ -25,7 +25,7 @@ Elliot requires tensorflow version 2.3.2 or later. If you want to use Elliot wit
 </ul> 
 </p>
 <pre>
-  git clone [https://github.com/RecSysEvaluation/hyperparameter_tuning.git](https://github.com/Faisalse/RecSys2023_hyperparameter_tuning.git)
+  git clone https://github.com/Faisalse/RecSys2023_hyperparameter_tuning.git
   conda create --name elliot_env python=3.8
 </pre>
 
