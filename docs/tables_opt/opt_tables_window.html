@@ -1,13 +1,12 @@
 	<ul class="nav nav-tabs" id="tables_tabs">
 		<li class="active"><a href="#opt-EASER" data-toggle="tab" aria-expanded="true">EASER</a></li>
 		<li class=""><a href="#opt-MultiDAE" data-toggle="tab" aria-expanded="true">MultiDAE</a></li>
-		 <!-- <li class=""><a href="#opt-MultiVAE" data-toggle="tab" aria-expanded="true">MultiVAE</a></li> -->
+		 <li class=""><a href="#opt-MultiVAE" data-toggle="tab" aria-expanded="true">MultiVAE</a></li>
 		<li class=""><a href="#opt-GMF" data-toggle="tab" aria-expanded="true">GMF</a></li>
-		 <!-- <li><a href="#opt-NeuMF" data-toggle="tab" aria-expanded="true">NeuMF</a></li> -->
+		 <li><a href="#opt-NeuMF" data-toggle="tab" aria-expanded="true">NeuMF</a></li>
 		<li><a href="#opt-ConvNeuMF" data-toggle="tab" aria-expanded="true">ConvNeuMF</a></li>
 		<li><a href="#opt-ConvMF" data-toggle="tab" aria-expanded="true">ConvMF</a></li>
 		<li><a href="#opt-NGCF" data-toggle="tab" aria-expanded="true">NGCF</a></li>
-		
 	</ul>
 
 	<div class="tab-content">
@@ -58,9 +57,9 @@
 			<th>174.179</th>		
 		</tr>		
 	</tbody></table>
-		<br>		
-	</div>
-		
+		<br>
+			
+	</div>	
 	<div id="opt-MultiDAE" class="tab-pane fade">
 		<h3>Hyperparameters for <span class="caps">MultiDAE</span></h3>
 		<p>
@@ -78,7 +77,8 @@
 			<td>Epoch</td>
 			<td align="right">[20, 30, 40]</td>
 		</tr>
-					
+
+		
 		<tr>
 			<td>Learning Rate</td>
 			<td align="right">[0.0001, 0.0005,0.003, 0.001]</td>
@@ -101,7 +101,7 @@
 		</tr>
 
 		<tr>
-			<td>reg_lambda</td>
+			<td>Reg_lambda</td>
 			<td align="right">0.01</td>
 		</tr>
 
@@ -120,9 +120,9 @@
 			                <th>Epoch</th>
 					<th>Learning Rate</th>
 					<th>Batch Size</th>
-					<th>intermediate_dim</th>
+					<th>Intermediate_dim</th>
 					<th>Latent_dim</th>
-					<th>reg_lambda</th>
+					<th>Reg_lambda</th>
 					<th>Dropout_pkeep</th>
 				</tr>
 					
@@ -179,9 +179,9 @@
 			                <th>Epoch</th>
 					<th>Learning Rate</th>
 					<th>Batch Size</th>
-					<th>intermediate_dim</th>
+					<th>Intermediate_dim</th>
 					<th>Latent_dim</th>
-					<th>reg_lambda</th>
+					<th>Reg_lambda</th>
 					<th>Dropout_pkeep</th>
 					
 				</tr>
@@ -262,7 +262,7 @@
 					
 				</tr>	
 				<tr>
-					<td>is_edge_weight_train</td>
+					<td>Is_edge_weight_train</td>
 					<td align="right">True</td>
 					
 				</tr>
@@ -278,7 +278,7 @@
 					<th>Learning Rate</th>
 					<th>Batch Size</th>
 		                        <th>Mf_factors</th>
-			                <th>is_edge_weight_train</th>
+			                <th>Is_edge_weight_train</th>
 		</tr>
 					
 		<tr>
@@ -305,7 +305,7 @@
 					<th>512</th>
 					<th>256</th>
 		                        <th>0.00035</th>
-			                <th>true</th>
+			                <th>True</th>
 		</tr>
 			    
 				
@@ -347,7 +347,7 @@
 				</tr>
 				
 				<tr>
-					<td>mf_factors</td>
+					<td>Mf_factors</td>
 					<td align="right">[64, 128, 256]</td>
 					
 				</tr>
@@ -359,18 +359,18 @@
 					
 					
 				<tr>
-					<td>dropout</td>
+					<td>Dropout</td>
 					<td align="right">0</td>
 					
 				</tr>
 					
 				<tr>
-					<td>is_mf_train</td>
+					<td>Is_mf_train</td>
 					<td align="right">True</td>	
 				</tr>
 
 				<tr>
-					<td>is_mlp_train</td>
+					<td>Is_mlp_train</td>
 					<td align="right">True</td>	
 				</tr>
 
@@ -393,11 +393,11 @@
 					<th>Dataset</th>
 					<th>Epoch</th>
 					<th>Learning rate</th>
-					<th>mf_factors</th>
+					<th>Mf_factors</th>
 		                        <th>Batch Size</th>
-			                <th>dropout</th>
-			 		<th>is_mf_train</th>
-			                <th>is_mlp_train</th>
+			                <th>Dropout</th>
+			 		<th>Is_mf_train</th>
+			                <th>Is_mlp_train</th>
 			                <th>m</th>
 		</tr>
 					
@@ -698,12 +698,12 @@
 				</tr>
 
 				<tr>
-					<th>node_dropout</th>
+					<th>Node_dropout</th>
 					<th>[0.1,0.2, 0.3, 0.45, 0.5]</th>
 				</tr>
 
 				<tr>
-					<th>message_dropout</th>
+					<th>Message_dropout</th>
 					<th>[0.1,0.2, 0.3, 0.45, 0.5]</th>
 				</tr>
 					
