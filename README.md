@@ -18,8 +18,8 @@ Elliot requires tensorflow version 2.3.2 or later. If you want to use Elliot wit
 
 <p>
 <ul>
-  <li>Open the anaconda command prompt to download GitHub repo<em>"hyperparameter_tuning"</em></li>
-  <li>Move to the directory where you want to store the GitHub repo<em>"hyperparameter_tuning"
+  <li>Open the anaconda command prompt to download GitHub repo<em>"RecSys2023_hyperparameter_tuning"</em></li>
+  <li>Move to the directory where you want to store the GitHub repo<em>"RecSys2023_hyperparameter_tuning"
 </em></li>
   <li>Run the following command to create <em>"elliot_env"</em> environment</li>
 </ul> 
