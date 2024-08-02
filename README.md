@@ -1,4 +1,8 @@
-![screenshot](oprah.jpg)
+
+<p align="center">
+  <img src="oprah.jpg" width="350" title="hover text">
+  <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text">
+</p>
 
 <p align="justify">This reproducibility package was prepared for the paper titled "Everyone's a Winner! On Hyperparameter Tuning of Recommendation Models" and submitted to the ACM RecSys '23 Conference. The results reported in this paper were achieved with the help of the Elliot Framework. Please refer to the official <a href="https://elliot.readthedocs.io/en/latest/guide/introduction.html">web documentation</a> and <a href="https://github.com/sisinflab/elliot">GitHub</a> page for further information.</p> 
 
